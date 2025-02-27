@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables and Forums</title>
+</head>
+<body>
+    <table>
+        <caption>Favorite Colors</caption>
+        <thead>
+            <tr>
+                <th scope="colgroup" colspan="5">Scale</th>
+            </tr>
+            <tr>
+                <th scope="col">Color</th>
+                <th scope="col">Best</th>
+                <th scope="col">Okay</th>
+                <th scope="col">Worst</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Blue</th>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <th scope="row">Green</th>
+                <td>1</td>
+                <td>10</td>
+                <td>5</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <th scope="row">Red</th>
+                <td>5</td>
+                <td>1</td>
+                <td>10</td>
+                <td>16</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total</th>
+                <td>16</td>
+                <td>16</td>
+                <td>16</td>
+                <td>48</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+    <form action="#" method="get">
+        <label for="name">Enter your name: </label>
+        <input type="text" name="name" id="name" required>
+        <label for="color">Enter your favorite color: </label>
+        <input type="text" name="color" id="color" required>
+        <input type="color" name="color_box" id="color_box" required>
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+    <form action="#" method="get">
+        <button type="submit" name="button_example">This is a button!</button>
+    </form>
+    <hr>
+    <form action="#" method="get">
+        <label for="myColor">What is your favorite Color?</label>
+        <input list="Color" id="myColor" name="myColor">
+        <datalist id="Color">
+            <option value="Blue">
+            <option value="Green">
+            <option value="Red">
+         </datalist>
+    </form>
+    <hr>
+    <form action="#" method="get">
+        <label for="color-type">What kind of colors do you like?</label>
+        <select id="color-type" name="color-type">
+            <option value="">--Please choose an option--</option>
+            <optgroup label="Primary">
+                <option value="blue">Blue</option>
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+            </optgroup>
+            <optgroup label="Secondary">
+                <option value="Orange">Orange</option>
+                <option value="Green">Green</option>
+                <option value="Purple">Purple</option>
+            </optgroup>
+        </select>
+    </form>
+    <hr>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Choose your favorite color: </legend>
+            <label><input type="radio" name="favcolor" value="Blue">Blue</label><br>
+            <label><input type="radio" name="favcolor" value="Green">Green</label><br>
+            <label><input type="radio" name="favcolor" value="Red">Red</label>
+        </fieldset>
+    </form>
+    <hr>
+    <form action="#" method="post">
+        <label for="thoughts_for_color">Why is your favorite color your favorite color?</label>
+        <textarea id="thoughts_for_color" name="thoughts_for_color" rows="5" cols="100">Enter here:</textarea>
+    </form>
+</body>
+</html>

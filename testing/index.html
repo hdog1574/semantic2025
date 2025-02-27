@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscript Puzzle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Subscript Puzzle</h1>
+        <p>Help the shopper by creating the chemical formula for water (H<sub>2</sub>O).</p>
+    </header>
+    <main>
+        <section>
+            <article class="grocery-store">
+                <p>Drag the correct elements to form the formula:</p>
+                <div class="elements">
+                    <div class="element" draggable="true" id="H">H</div>
+                    <div class="element" draggable="true" id="2">2</div>
+                    <div class="element" draggable="true" id="O">O</div>
+                    <img src="bread.jpg" alt="Draggable Image" id="draggable-image-1" draggable="true">
+                    <img src="bread.jpg" alt="Draggable Image" id="draggable-image-2" draggable="true">
+                </div>
+                <div class="drop-zone">
+                    <p>Drop here:</p>
+                    <div class="drop-area" id="drop-area-1"></div>
+                    <div class="drop-area" id="drop-area-2"></div>
+                    <div class="drop-area" id="drop-area-3"></div>
+                    <div class="drop-area" id="drop-area-4"></div>
+                    <div class="drop-area" id="drop-area-5"></div>
+                </div>
+                <button id="check-btn">Check Answer</button>
+                <p id="result-message"></p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Subscript Puzzle. All rights reserved.</p>
+    </footer>
+    <script src="puzzle.js"></script>
+</body>
+</html>
