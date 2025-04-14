@@ -141,7 +141,7 @@
     top: -50px; 
     width: 150px;
     text-align: center;
-    z-index: 12;
+    z-index: 17;
     }
 
     .door-right:hover .popup {
@@ -154,6 +154,14 @@
         left: 10%;
 
         display: block; 
+    }
+
+    .table-note:hover .popup {
+      display: block; 
+      position: absolute;
+      left: 50%; 
+      transform: translateX(-50%); 
+      margin-bottom: 15px; 
     }
 
   .door-left {
