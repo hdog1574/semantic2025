@@ -7,91 +7,67 @@
     <meta name="description" content="Escape room find the exit webpage game">
     <meta name="keywords" content="Puzzle">
     <title>Hayes's Escape the Website</title>
-    <!--<base href="https://www.website.com/">-->
-    <!--<link rel="stylesheet" href="style.css">-->
-    <!--<link rel="icon" href="images/favicon.ico">-->
+    <link rel="stylesheet" href="CSS/testhome.css">
 </head>
 <body>
     <header>
-        <img src="images/banner.png" alt="Welcome Banner">
-        <h1>Welcome to my Escape the Website Game</h1>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/auY_BxBQbeM?si=Sn6dx6DhWC-cHWk_" title="YouTube video player" style="border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <hr>
-        <nav></nav>
-        <a href="#walkthrough">Jump to Walkthrough section</a>
+        <h1>Escape the Website</h1>
+        <img src="images/flashlight.png" alt="Test">
+        <nav aria-label="Primary navigation">
+            <ul class="horizontal-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#how-to-play">How to Play</a></li>
+                <li><a href="#story">Story</a></li>
+                <li><a href="walkthrough.html">Walkthrough</a></li>
+                <li><a href="more.html">More</a></li>
+            </ul>
+        </nav>
     </header>
-    <section>
-        <header>
-            <h2>How to play</h2>
-            <ul>
-                <li>Each webpage will contain links that lead you to other webpages</li>
-                <li>You will need to use logic to navigate through these links to reach the end</li>
-                <li>When you reach the end you will be met with an end game screen</li>
-            </ul>
-            <hr>
-            <h3>Instructions</h3>
-            <ul>
-                <li>Hit start</li>
-                <li>Find your way out of the website.</li>
-            </ul>
-            <p>Can you <strong>escape</strong>?</p>
-            <hr>
-        </header>
-    </section>
-    <blockquote>"The only way out is through." <cite>Robert Frost</cite></blockquote>
-    <hr>
     <main>
-        <section>
+
+        <section class="hero">
+            <h2>Welcome to Hayes's Escape Room</h2>
+            <p>Your challenge awaits. Are you ready to escape?</p>
+        </section>        
+
+        <section id="how-to-play">
+            <h2>How to Play</h2>
+            <ul>
+                <li>Navigate through the rooms to reach the end</li>
+                <li>Find hints to get you past the next stage.</li>
+                <li>Escape!</li>
+            </ul>
+        </section>
+        <section id="story">
             <h2>Story</h2>
-            <p>Include backstory here</p> <!--Still coming up with storyline-->
-            <p>Story</p>
-            <p>Story</p>
-            <p>Story</p>
-            <p>Story</p>
-            <p>Story</p>
-            <p>Story</p>
-            <p>Story</p>
-            <p>Story</p>
-            <p>Story</p>
-            <p>Story</p>
-            <p>Story</p>
-            <p>Story</p>
-            <iframe src="hint.html"></iframe>
-            <p>The date is <time datetime="2025-02-16">February 16, 2025</time></p>
-            <p><em>Good Luck</em><br><small>have fun</small></p>
-            <a href="start.html" title="START">Click here to start</a>
-            <hr>
+            <p>You awaken to the sound of dripping water, 
+                the scent of damp concrete filling your lungs. 
+                As your eyes adjust to the dim, flickering light of a single, 
+                bare bulb, you realize you’re lying on the cold, 
+                gritty floor of a basement. Your wrists ache, 
+                as if recently freed from restraints. 
+                Shadows dance on the walls, revealing old, 
+                rusted tools and scattered debris.
+                
+                Sitting on the table in front of you is a crumpled piece of paper. 
+                You reach for it, hands trembling slightly, 
+                and flatten it out against the ground. 
+                Scrawled in jagged handwriting, the note reads... </p>
         </section>
+
+        <section id="start-game">
+            <h2>Start Your Escape</h2>
+            <a href="basementHTMLs/basement.html" class="start-link">Start Game</a>
+        </section>     
+        
+        <section id="more">
+            <h2>More Escape Rooms</h2>
+            <p>Click <a href="more.html">Here!</a></p>
+        </section> 
+
     </main>
-    <article>
-        <header>
-            <h2>Walkthrough Section</h2>
-        </header>
-        <section id="walkthrough">
-            <header>
-                <h4>Walkthrough</h4> <!--This would link to another page-->
-                <ol>
-                    <li>Step 1:</li>
-                    <li>Step 2:</li>
-                    <li>etc...</li>
-                </ol>
-                <picture>
-                    <!--I thought something like this might be cool but maybe difficult to actually implement-->
-                    <source srcset="images/hint.jpg" media="(max-width: 672px)">
-                    <source srcset="images/box.jpg" media="(min-width: 673px)">
-                    <img src="images/box.jpg" alt="Box Image">
-                </picture>
-            </header>
-        </section>
-    </article>
-    <section>
-        <header>
-            <h5>Tables and Forms link for example</h5>
-            <a href="tables_and_forms.html" title="Tables and Forms Example">Tables and Forms Example</a>
-        </header>
-    </section>
     <footer>
-        <address></address>
+        <p>&copy; 2025 Hayes McCoy</p>
     </footer>
 </body>
 </html>

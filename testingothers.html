@@ -1,96 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title> Jones Enterprises</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<base href="https://www. .com/">-->
-        <meta name="author" content="Lane Jones">
-        <meta name="description" content="Jones Enterprises is a company that specializes.">
-        <meta name="keywords" content="Jones Enterprises, Jones, Enterprises, Lane Jones">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Navigation Bar</title>
+    <style>
+        nav ul {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            list-style-position: inside;
+        }
 
-    <body>
-        <header>
-            <h1> Introduction to Jones Enterprises</h1>
+        nav ul a {
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 30%;
+            font-size: medium;
+            padding: 10px;
+        }
 
-            <a href="news.html">news page</a><br>
-
-            <p>This is a paragraph.
-                If I add sentences to this paragraph on separate lines, the lines will be joined when displayed in a browser.
-                I keep adding lines until I close the paragraph with its closing tag</p>
-            <hr>
-            <nav>
-
-            </nav>
-        </header>
-
-        <article>
-                <header>
-                    <h2> About Jones Enterprises</h2>
-                    <hr>
-                </header>
-
-            <section>
-                <header>
-                    <h3>Our Mission</h3>
-                    <hr>
-                </header>
-            </section>
-        </article>
-        <img src="images/UKlogo with words.webp" alt="Welcome Banner">
-        
-
-        <blockquote>
-            At the moment our mission is to gradutate from the University of Kentucky with a degree in Communications.
-            More specifically a pathway in buiness with two certificates. One in entrepreneurship and the other in sports and mass media.
-            </blockquote>
-                That will be happening on <strong>May 9th, 2025 at Rupp Arena.</strong>
-                <p> If you want to see the list of other graduations click 
-                    <a href="https://commencement.uky.edu/may-2025" target="_blank">here</a></p>
-                You can also see what commencement means to UK graduates here 
-
-                <hr>
-
-            <iframe width="560" height="315" 
-                src="https://www.youtube.com/embed/ag5BDPqSEzQ?si=vPUHrhi6XSc5MZJw" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe>
-
-            <blockquote>
-        </blockquote>
-
-        <hr>
-
-        <ol>
-            <li>Blue</li>
-            <li>Green</li>
-            <li>Yellow</li>
-        </ol>
-
-        <hr>
-
+        nav ul a:hover {
+            background-color: #ddd; 
+        }
+    </style>
+</head>
+<body>
+    <nav>
         <ul>
-            <li>Red</li>
-            <li>Orange</li>
-            <li>Purple</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-
-        <hr>
-        <pre>
-            #!/usr/bin/env bash
-
-            # list files in directory
-            for i in * ; do echo "${i}" ; done
-        </pre>
-        <footer>
-            <address>
-
-            </address>
-        </footer>
-    </body>
-</html>  
+    </nav>
+</body>
+</html>

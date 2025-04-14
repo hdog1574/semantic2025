@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
+    margin: 0; 
+    background: radial-gradient(circle, #b1b0a4 0%, #58564d 100%);
+  }
+header {
+    text-align: center; 
+    margin-top: 10px; 
+  }
+  
+  h1, p {
+    margin: 0; 
+    color: black; 
+    font-family: Arial, sans-serif; 
+  }
+  
+  p {
+    font-size: 18px; 
+  }
+  
+   .compass {
+   position: relative;
+   width: 200px;
+   height: 200px;
+   border: 8px solid #333; 
+   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.5), inset 2px 2px 8px rgba(255, 255, 255, 0.2);
+   border-radius: 50%;
+   background: radial-gradient(circle, #b8af5c 0%, #8d8040 100%); 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 40px;
+   }
+
+   .mark {
+   position: absolute;
+   font-size: 22px;
+   font-weight: bold;
+   color: #000;
+   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+   }
+
+   .north {
+   top: 10px; 
+   left: 50%;
+   transform: translateX(-50%);
+   }
+
+   .east {
+   top: 50%;
+   right: 10px;
+   transform: translateY(-50%);
+   }
+
+   .south {
+   bottom: 10px;
+   left: 50%;
+   transform: translateX(-50%);
+   }
+
+   .west {
+   top: 50%;
+   left: 10px;
+   transform: translateY(-50%);
+   }
+
+   .needle {
+   position: absolute;
+   width: 4px;
+   height: 80px;
+   background: red;
+   box-shadow: 0 0 8px rgba(255, 0, 0, 0.5); 
+   border: 1px solid black;
+   transform-origin: bottom; 
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -100%) rotate(0deg);
+   animation: spin-directions 6s ease-in-out infinite;
+   }
+
+   .needle::after {
+   content: '';
+   position: absolute;
+   width: 10px;
+   height: 10px;
+   background: black;
+   border-radius: 50%;
+   top: 100%; 
+   left: 50%;
+   transform: translate(-50%, -50%);
+   }
+
+   @keyframes spin-directions {
+   0% {
+       transform: translate(-50%, -100%) rotate(0deg); /* North */
+   }
+   15% {
+       transform: translate(-50%, -100%) rotate(180deg); /* South */
+   }
+   25% {
+       transform: translate(-50%, -100%) rotate(90deg); /* East */
+   }
+   50% {
+       transform: translate(-50%, -100%) rotate(-90deg); /* West */
+   }
+   75% {
+    transform: translate(-50%, -100%) rotate(0deg); /* Back to North */
+    }
+   100% {
+       transform: translate(-50%, -100%) rotate(0deg); /* Back to North */
+   }
+}

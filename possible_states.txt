@@ -1,0 +1,549 @@
+import itertools
+
+# Define the matrix (button-light interactions)
+matrix = [
+    [1, 0, 1, 0, 0, 1],  # Button 1
+    [0, 1, 1, 0, 1, 0],  # Button 2
+    [1, 1, 0, 1, 0, 0],  # Button 3
+    [0, 0, 1, 1, 1, 0],  # Button 4
+    [0, 1, 0, 0, 1, 1],  # Button 5
+    [1, 0, 0, 1, 0, 1]   # Button 6
+]
+
+# Generate all 64 states
+states = list(itertools.product([0, 1], repeat=6))  # All combinations of 6 binary digits
+
+# Function to toggle lights based on button press
+def toggle_lights(state, button_index):
+    return [
+        (state[i] + matrix[button_index][i]) % 2  # XOR logic for toggle
+        for i in range(6)
+    ]
+
+# Calculate and print all results
+for state in states:
+    state_str = "".join(map(str, state))
+    print(f"State: {state_str}")
+    for button in range(6):
+        new_state = toggle_lights(state, button)
+        new_state_str = "".join(map(str, new_state))
+        print(f"  Button {button + 1} → {new_state_str}")
+    print()
+
+
+State: 000000
+  Button 1 → 101001
+  Button 2 → 011010
+  Button 3 → 110100
+  Button 4 → 001110
+  Button 5 → 010011
+  Button 6 → 100101
+
+State: 000001
+  Button 1 → 101000
+  Button 2 → 011011
+  Button 3 → 110101
+  Button 4 → 001111
+  Button 5 → 010010
+  Button 6 → 100100
+
+State: 000010
+  Button 1 → 101011
+  Button 2 → 011000
+  Button 3 → 110110
+  Button 4 → 001100
+  Button 5 → 010001
+  Button 6 → 100111
+
+State: 000011
+  Button 1 → 101010
+  Button 2 → 011001
+  Button 3 → 110111
+  Button 4 → 001101
+  Button 5 → 010000
+  Button 6 → 100110
+
+State: 000100
+  Button 1 → 101101
+  Button 2 → 011110
+  Button 3 → 110000
+  Button 4 → 001010
+  Button 5 → 010111
+  Button 6 → 100001
+
+State: 000101
+  Button 1 → 101100
+  Button 2 → 011111
+  Button 3 → 110001
+  Button 4 → 001011
+  Button 5 → 010110
+  Button 6 → 100000
+
+State: 000110
+  Button 1 → 101111
+  Button 2 → 011100
+  Button 3 → 110010
+  Button 4 → 001000
+  Button 5 → 010101
+  Button 6 → 100011
+
+State: 000111
+  Button 1 → 101110
+  Button 2 → 011101
+  Button 3 → 110011
+  Button 4 → 001001
+  Button 5 → 010100
+  Button 6 → 100010
+
+State: 001000
+  Button 1 → 100001
+  Button 2 → 010010
+  Button 3 → 111100
+  Button 4 → 000110
+  Button 5 → 011011
+  Button 6 → 101101
+
+State: 001001
+  Button 1 → 100000
+  Button 2 → 010011
+  Button 3 → 111101
+  Button 4 → 000111
+  Button 5 → 011010
+  Button 6 → 101100
+
+State: 001010
+  Button 1 → 100011
+  Button 2 → 010000
+  Button 3 → 111110
+  Button 4 → 000100
+  Button 5 → 011001
+  Button 6 → 101111
+
+State: 001011
+  Button 1 → 100010
+  Button 2 → 010001
+  Button 3 → 111111
+  Button 4 → 000101
+  Button 5 → 011000
+  Button 6 → 101110
+
+State: 001100
+  Button 1 → 100101
+  Button 2 → 010110
+  Button 3 → 111000
+  Button 4 → 000010
+  Button 5 → 011111
+  Button 6 → 101001
+
+State: 001101
+  Button 1 → 100100
+  Button 2 → 010111
+  Button 3 → 111001
+  Button 4 → 000011
+  Button 5 → 011110
+  Button 6 → 101000
+
+State: 001110
+  Button 1 → 100111
+  Button 2 → 010100
+  Button 3 → 111010
+  Button 4 → 000000
+  Button 5 → 011101
+  Button 6 → 101011
+
+State: 001111
+  Button 1 → 100110
+  Button 2 → 010101
+  Button 3 → 111011
+  Button 4 → 000001
+  Button 5 → 011100
+  Button 6 → 101010
+
+State: 010000
+  Button 1 → 111001
+  Button 2 → 001010
+  Button 3 → 100100
+  Button 4 → 011110
+  Button 5 → 000011
+  Button 6 → 110101
+
+State: 010001
+  Button 1 → 111000
+  Button 2 → 001011
+  Button 3 → 100101
+  Button 4 → 011111
+  Button 5 → 000010
+  Button 6 → 110100
+
+State: 010010
+  Button 1 → 111011
+  Button 2 → 001000
+  Button 3 → 100110
+  Button 4 → 011100
+  Button 5 → 000001
+  Button 6 → 110111
+
+State: 010011
+  Button 1 → 111010
+  Button 2 → 001001
+  Button 3 → 100111
+  Button 4 → 011101
+  Button 5 → 000000
+  Button 6 → 110110
+
+State: 010100
+  Button 1 → 111101
+  Button 2 → 001110
+  Button 3 → 100000
+  Button 4 → 011010
+  Button 5 → 000111
+  Button 6 → 110001
+
+State: 010101
+  Button 1 → 111100
+  Button 2 → 001111
+  Button 3 → 100001
+  Button 4 → 011011
+  Button 5 → 000110
+  Button 6 → 110000
+
+State: 010110
+  Button 1 → 111111
+  Button 2 → 001100
+  Button 3 → 100010
+  Button 4 → 011000
+  Button 5 → 000101
+  Button 6 → 110011
+
+State: 010111
+  Button 1 → 111110
+  Button 2 → 001101
+  Button 3 → 100011
+  Button 4 → 011001
+  Button 5 → 000100
+  Button 6 → 110010
+
+State: 011000
+  Button 1 → 110001
+  Button 2 → 000010
+  Button 3 → 101100
+  Button 4 → 010110
+  Button 5 → 001011
+  Button 6 → 111101
+
+State: 011001
+  Button 1 → 110000
+  Button 2 → 000011
+  Button 3 → 101101
+  Button 4 → 010111
+  Button 5 → 001010
+  Button 6 → 111100
+
+State: 011010
+  Button 1 → 110011
+  Button 2 → 000000
+  Button 3 → 101110
+  Button 4 → 010100
+  Button 5 → 001001
+  Button 6 → 111111
+
+State: 011011
+  Button 1 → 110010
+  Button 2 → 000001
+  Button 3 → 101111
+  Button 4 → 010101
+  Button 5 → 001000
+  Button 6 → 111110
+
+State: 011100
+  Button 1 → 110101
+  Button 2 → 000110
+  Button 3 → 101000
+  Button 4 → 010010
+  Button 5 → 001111
+  Button 6 → 111001
+
+State: 011101
+  Button 1 → 110100
+  Button 2 → 000111
+  Button 3 → 101001
+  Button 4 → 010011
+  Button 5 → 001110
+  Button 6 → 111000
+
+State: 011110
+  Button 1 → 110111
+  Button 2 → 000100
+  Button 3 → 101010
+  Button 4 → 010000
+  Button 5 → 001101
+  Button 6 → 111011
+
+State: 011111
+  Button 1 → 110110
+  Button 2 → 000101
+  Button 3 → 101011
+  Button 4 → 010001
+  Button 5 → 001100
+  Button 6 → 111010
+
+State: 100000
+  Button 1 → 001001
+  Button 2 → 111010
+  Button 3 → 010100
+  Button 4 → 101110
+  Button 5 → 110011
+  Button 6 → 000101
+
+State: 100001
+  Button 1 → 001000
+  Button 2 → 111011
+  Button 3 → 010101
+  Button 4 → 101111
+  Button 5 → 110010
+  Button 6 → 000100
+
+State: 100010
+  Button 1 → 001011
+  Button 2 → 111000
+  Button 3 → 010110
+  Button 4 → 101100
+  Button 5 → 110001
+  Button 6 → 000111
+
+State: 100011
+  Button 1 → 001010
+  Button 2 → 111001
+  Button 3 → 010111
+  Button 4 → 101101
+  Button 5 → 110000
+  Button 6 → 000110
+
+State: 100100
+  Button 1 → 001101
+  Button 2 → 111110
+  Button 3 → 010000
+  Button 4 → 101010
+  Button 5 → 110111
+  Button 6 → 000001
+
+State: 100101
+  Button 1 → 001100
+  Button 2 → 111111
+  Button 3 → 010001
+  Button 4 → 101011
+  Button 5 → 110110
+  Button 6 → 000000
+
+State: 100110
+  Button 1 → 001111
+  Button 2 → 111100
+  Button 3 → 010010
+  Button 4 → 101000
+  Button 5 → 110101
+  Button 6 → 000011
+
+State: 100111
+  Button 1 → 001110
+  Button 2 → 111101
+  Button 3 → 010011
+  Button 4 → 101001
+  Button 5 → 110100
+  Button 6 → 000010
+
+State: 101000
+  Button 1 → 000001
+  Button 2 → 110010
+  Button 3 → 011100
+  Button 4 → 100110
+  Button 5 → 111011
+  Button 6 → 001101
+
+State: 101001
+  Button 1 → 000000
+  Button 2 → 110011
+  Button 3 → 011101
+  Button 4 → 100111
+  Button 5 → 111010
+  Button 6 → 001100
+
+State: 101010
+  Button 1 → 000011
+  Button 2 → 110000
+  Button 3 → 011110
+  Button 4 → 100100
+  Button 5 → 111001
+  Button 6 → 001111
+
+State: 101011
+  Button 1 → 000010
+  Button 2 → 110001
+  Button 3 → 011111
+  Button 4 → 100101
+  Button 5 → 111000
+  Button 6 → 001110
+
+State: 101100
+  Button 1 → 000101
+  Button 2 → 110110
+  Button 3 → 011000
+  Button 4 → 100010
+  Button 5 → 111111
+  Button 6 → 001001
+
+State: 101101
+  Button 1 → 000100
+  Button 2 → 110111
+  Button 3 → 011001
+  Button 4 → 100011
+  Button 5 → 111110
+  Button 6 → 001000
+
+State: 101110
+  Button 1 → 000111
+  Button 2 → 110100
+  Button 3 → 011010
+  Button 4 → 100000
+  Button 5 → 111101
+  Button 6 → 001011
+
+State: 101111
+  Button 1 → 000110
+  Button 2 → 110101
+  Button 3 → 011011
+  Button 4 → 100001
+  Button 5 → 111100
+  Button 6 → 001010
+
+State: 110000
+  Button 1 → 011001
+  Button 2 → 101010
+  Button 3 → 000100
+  Button 4 → 111110
+  Button 5 → 100011
+  Button 6 → 010101
+
+State: 110001
+  Button 1 → 011000
+  Button 2 → 101011
+  Button 3 → 000101
+  Button 4 → 111111
+  Button 5 → 100010
+  Button 6 → 010100
+
+State: 110010
+  Button 1 → 011011
+  Button 2 → 101000
+  Button 3 → 000110
+  Button 4 → 111100
+  Button 5 → 100001
+  Button 6 → 010111
+
+State: 110011
+  Button 1 → 011010
+  Button 2 → 101001
+  Button 3 → 000111
+  Button 4 → 111101
+  Button 5 → 100000
+  Button 6 → 010110
+
+State: 110100
+  Button 1 → 011101
+  Button 2 → 101110
+  Button 3 → 000000
+  Button 4 → 111010
+  Button 5 → 100111
+  Button 6 → 010001
+
+State: 110101
+  Button 1 → 011100
+  Button 2 → 101111
+  Button 3 → 000001
+  Button 4 → 111011
+  Button 5 → 100110
+  Button 6 → 010000
+
+State: 110110
+  Button 1 → 011111
+  Button 2 → 101100
+  Button 3 → 000010
+  Button 4 → 111000
+  Button 5 → 100101
+  Button 6 → 010011
+
+State: 110111
+  Button 1 → 011110
+  Button 2 → 101101
+  Button 3 → 000011
+  Button 4 → 111001
+  Button 5 → 100100
+  Button 6 → 010010
+
+State: 111000
+  Button 1 → 010001
+  Button 2 → 100010
+  Button 3 → 001100
+  Button 4 → 110110
+  Button 5 → 101011
+  Button 6 → 011101
+
+State: 111001
+  Button 1 → 010000
+  Button 2 → 100011
+  Button 3 → 001101
+  Button 4 → 110111
+  Button 5 → 101010
+  Button 6 → 011100
+
+State: 111010
+  Button 1 → 010011
+  Button 2 → 100000
+  Button 3 → 001110
+  Button 4 → 110100
+  Button 5 → 101001
+  Button 6 → 011111
+
+State: 111011
+  Button 1 → 010010
+  Button 2 → 100001
+  Button 3 → 001111
+  Button 4 → 110101
+  Button 5 → 101000
+  Button 6 → 011110
+
+State: 111100
+  Button 1 → 010101
+  Button 2 → 100110
+  Button 3 → 001000
+  Button 4 → 110010
+  Button 5 → 101111
+  Button 6 → 011001
+
+State: 111101
+  Button 1 → 010100
+  Button 2 → 100111
+  Button 3 → 001001
+  Button 4 → 110011
+  Button 5 → 101110
+  Button 6 → 011000
+
+State: 111110
+  Button 1 → 010111
+  Button 2 → 100100
+  Button 3 → 001010
+  Button 4 → 110000
+  Button 5 → 101101
+  Button 6 → 011011
+
+State: 111111
+  Button 1 → 010110
+  Button 2 → 100101
+  Button 3 → 001011
+  Button 4 → 110001
+  Button 5 → 101100
+  Button 6 → 011010
+
+
+
+** Process exited - Return Code: 0 **
+Press Enter to exit terminal

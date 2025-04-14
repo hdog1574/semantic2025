@@ -1,0 +1,82 @@
+body {
+    font-family: 'Courier New', monospace; 
+    background-color: #f4f1e4;
+    margin: 0;
+    padding: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.note {
+    background-color: #fff8dc; 
+    border: 2px solid #d4af37; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
+    padding: 3vw; 
+    text-align: center;
+    border-radius: 10px; 
+    width: 90%; 
+    max-width: 1000px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+}
+
+#cipher-table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 2vw; 
+    font-family: 'Courier New', monospace;
+    border: 2px solid #d4af37; 
+    font-size: 1.8vw; 
+}
+
+#cipher-table th, #cipher-table td {
+    border: 1px solid #d4af37;
+    padding: 1vw; 
+    text-align: center; 
+    box-sizing: border-box; 
+}
+
+#cipher-table thead {
+    background-color: #f1d6ab; 
+    font-weight: bold;
+}
+
+#cipher-table tbody tr:nth-child(even) {
+    background-color: #fffbe6;
+}
+
+h1 {
+    font-size: 4vw; 
+    margin-bottom: 1vw; 
+    color: #5a4634; 
+}
+
+p {
+    font-size: 2vw; 
+    margin-bottom: 2vw; 
+    color: #555; 
+}
+
+@media (min-width: 768px) {
+    .note {
+        padding: 20px; 
+        max-width: 800px; 
+    }
+
+    #cipher-table {
+        font-size: 1em; 
+    }
+
+    h1 {
+        font-size: 1.8em; 
+    }
+
+    p {
+        font-size: 1.2em; 
+    }
+}

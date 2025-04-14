@@ -1,0 +1,163 @@
+html {
+    scroll-padding-top: 15vh;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(135deg, #2c2623, #2e1e14);
+    padding: 5rem;
+    color: #89775c;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #d2b48c; 
+}
+
+p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+section {
+    text-align: center;
+    border: 4px solid #2f231aae;
+    border-radius: 1rem;
+    background: radial-gradient(circle, #5c4532 20%, #5b482e 80%);
+    box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.3), inset 4px 4px 8px rgba(51, 30, 30, 0.15), 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #2c2623;
+    margin-bottom: 15rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.lockbox {
+    background: radial-gradient(circle, #7d633f 0%, #5c4532 100%);
+    box-shadow: inset -8px -8px 16px rgba(0, 0, 0, 0.6), inset 8px 8px 16px rgba(98, 81, 81, 0.2);
+    width: 320px;
+    height: 220px;
+    margin: 3rem auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.compass-indentation {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #5c4532 30%, #3a2d21 100%);
+    border-radius: 50%;
+    box-shadow: inset -16px -16px 12px rgba(0, 0, 0, 0.5), inset 16px 16px 12px rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.compass {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #b5aa4700 30%, #8d804000 100%);
+    border-radius: 50%;
+    box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.5), inset 4px 4px 8px rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.needle {
+    position: absolute;
+    width: 4px;
+    height: 60px;
+    background: rgba(255, 0, 0, 0); 
+    transform-origin: top;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 8px rgba(9, 9, 9, 0.393); 
+}
+
+
+.mark {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: #3e2a2a62;
+}
+
+.north {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.east {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.south {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.west {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+section.puzzle a {
+    display: inline-block;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #2c2623;
+    background-color: #7d633f; 
+    padding: 1rem 2.5rem;
+    border: 3px solid #5c4532;
+    border-radius: 0.75rem; 
+    box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.4), inset 4px 4px 8px rgba(255, 255, 255, 0.2), 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+section.puzzle a:hover {
+    background-color: #8e7453;
+    border-color: #3a2d21;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.6), inset 6px 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+section.puzzle a:focus {
+    outline: 2px dashed #8e7453;
+    outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+    section {
+        margin-top: 10rem auto; 
+        padding: 2%;
+    }
+
+    .lockbox {
+        width: 250px;
+        height: 180px;
+    }
+
+    .compass-indentation {
+        width: 120px;
+        height: 120px;
+    }
+
+    .compass {
+        width: 100px;
+        height: 100px;
+    }
+
+    section.puzzle a {
+        font-size: 1.5rem;
+        padding: 0.75rem 2rem;
+    }
+}

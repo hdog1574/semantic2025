@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basement</title>
+    <link rel="stylesheet" href="CSS/keypad_test.css">
+</head>
+<body>
+    <header>
+        <h2>You wake up and find yourself in a basement.</h2>
+    </header>
+    <div class="room">
+        
+        <section id="first" class="keypad_open">
+            <a href="#correct_path_1">1</a>
+            <a href="#fail_path_1">2</a>
+            <a href="#fail_path_1">3</a>
+            <a href="#fail_path_1">4</a>
+          </section>
+          
+          <!-- Correct path 1 -->
+          <section id="correct_path_1" class="keypad_open">
+            <a href="#fail_path_2">1</a>
+            <a href="#correct_path_2">2</a>
+            <a href="#fail_path_2">3</a>
+            <a href="#fail_path_2">4</a>
+          </section>
+          
+          <!-- Correct path 2 -->
+          <section id="correct_path_2" class="keypad_open">
+            <a href="#fail_path_3">1</a>
+            <a href="#fail_path_3">2</a>
+            <a href="#correct_path_3">3</a>
+            <a href="#fail_path_3">4</a>
+          </section>
+          
+          <!-- Correct path 3 -->
+          <section id="correct_path_3" class="keypad_open">
+            <a href="#fail">1</a>
+            <a href="#fail">2</a>
+            <a href="#fail">3</a>
+            <a href="basement_keypad_unlocked.html">4</a>
+          </section>
+          
+          <!-- Failure Paths -->
+          <section id="fail_path_1" class="keypad_open">
+            <a href="#fail_path_2">1</a>
+            <a href="#fail_path_2">2</a>
+            <a href="#fail_path_2">3</a>
+            <a href="#fail_path_2">4</a>
+          </section>
+          
+          <section id="fail_path_2" class="keypad_open">
+            <a href="#fail_path_3">1</a>
+            <a href="#fail_path_3">2</a>
+            <a href="#fail_path_3">3</a>
+            <a href="#fail_path_3">4</a>
+          </section>
+          
+          <section id="fail_path_3" class="keypad_open">
+            <a href="basement_keypad_test.html#first">1</a>
+            <a href="basement_keypad_test.html#first">2</a>
+            <a href="basement_keypad_test.html#first">3</a>
+            <a href="basement_keypad_test.html#first">4</a>
+          </section>
+        
+        <div class="wall"></div>
+        <div class="door door-left">
+          <div class="doorknob"></div>
+          <a href="basement_keypad_test.html#first">
+          <div class="keypad"></div>
+          </a>
+          <div class="popup">The door is locked with a keypad. Find the code.</div>
+        </div>
+        <div class="door door-right">
+          <div class="doorknob"></div>
+          <div class="popup">The door is unlocked.</div>
+        </div>
+        <div class="table">
+          <div class="table-top"></div>
+          <div class="table-leg-left"></div>
+          <div class="table-leg-right"></div>
+          <div class="table-note"></div>
+        </div>
+        <div class="furniture box box-large"></div>
+        <div class="furniture box box-small"></div>
+        <div class="furniture box box-large_2"></div>
+        <div class="furniture box box-small_2"></div>
+        <div class="rug"></div>
+        <div class="water puddle"></div>
+        <div class="drip drip1"></div>
+        <div class="drip drip2"></div>
+        <div class="cobweb cobweb1"></div>
+        <div class="cobweb cobweb2"></div>
+        <div class="hole hole1"></div>
+        <div class="hole hole2"></div>
+        <div class="lightbulb">
+          <div class="bulb"></div>
+          <div class="cord"></div>
+        </div>
+        <div class="bucket">
+          <a href="basement_updated.html">
+            <div class="key"></div>
+          </a>
+          <div class="bucket-water"></div>
+          <div class="bucket-water-spill"></div>
+        </div>
+        <div class="puddle"></div>
+        <div class="ground"></div>
+    </div>      
+</body>
+</html>

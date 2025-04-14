@@ -1,0 +1,46 @@
+html {
+    background-color: black;
+    scroll-padding-top:30vh;
+}
+
+p, a {
+    text-align: center;
+    color: white;
+}
+section {
+    text-align: center;
+    border-style: dotted;
+    border-color: greenyellow;
+
+    border-radius: 1rem;
+    background-color: grey;
+    margin-top: 30%;
+    margin-bottom: 30%; 
+    padding: 5%; 
+}
+
+section.puzzle a {
+    text-align: center;
+    background-color: blue;
+    border-style: outset;
+    border-color: greenyellow;
+    color: white;
+    font-size: 1.5rem;
+    word-spacing: 1em; 
+    letter-spacing: 0.5em; 
+    margin: 2%; 
+    padding: 0.5em 1em; 
+    text-decoration: none;
+    
+}
+
+section.puzzle a:hover {
+    background-color: green;
+}
+
+section.start a {
+    font-family: monospace;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+}
